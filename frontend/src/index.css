@@ -1,0 +1,118 @@
+@import 'tailwindcss';
+
+:root {
+  --radius: 0.9rem;
+
+  --background: #1c0444;
+  --foreground: #63eb28;
+
+  --card: #1c0444;
+  --card-foreground: #63eb28;
+
+  --popover: #1c0444;
+  --popover-foreground: #63eb28;
+
+  --primary: #63eb28;
+  --primary-foreground: #1c0444;
+
+  --secondary: #1c0444;
+  --secondary-foreground: #63eb28;
+
+  --muted: #1c0444;
+  --muted-foreground: #63eb28;
+
+  --accent: #63eb28;
+  --accent-foreground: #1c0444;
+
+  --destructive: #63eb28;
+  --destructive-foreground: #1c0444;
+
+  --border: #63eb28;
+  --input: #63eb28;
+  --ring: #63eb28;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+* {
+  box-sizing: border-box;
+  border-color: var(--border);
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: Arial, sans-serif;
+}
+
+[data-sonner-toaster] [data-sonner-toast] {
+  background: var(--card) !important;
+  color: var(--card-foreground) !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: none !important;
+}
+
+[data-sonner-toaster] [data-sonner-toast] [data-title] {
+  color: var(--card-foreground) !important;
+}
+
+[data-sonner-toaster] [data-sonner-toast] [data-description] {
+  color: var(--card-foreground) !important;
+  opacity: 0.8;
+}
+
+[data-sonner-toaster] [data-sonner-toast] [data-button] {
+  background: var(--primary) !important;
+  color: var(--primary-foreground) !important;
+  border: 1px solid var(--border) !important;
+}
+
+[data-sonner-toaster] [data-sonner-toast] [data-cancel] {
+  background: var(--background) !important;
+  color: var(--foreground) !important;
+  border: 1px solid var(--border) !important;
+}
+
+[data-sonner-toaster] [data-sonner-toast] [data-icon] {
+  color: var(--foreground) !important;
+}
